@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --light-gray: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-gray);
+}
+
+.container {
+  padding: 3.2rem;
+  background-color: var(--White);
+  width: 60rem;
+  border-radius: 1.6rem 1.6rem 16rem 0.16rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrapper {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.form-wrapper div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrapper div label {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--Smokey-grey);
+}
+
+.form-wrapper div label.error {
+  color: var(--Light-red);
+}
+
+input {
+  width: 11rem;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  font-size: 3.2rem;
+  border: 1px solid var(--Off-white);
+}
+
+input.error {
+  border-color: var(--Light-red);
+}
+
+input:focus {
+  border-color: var(--Smokey-grey);
+}
+
+input::placeholder {
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.form-wrapper div small{
+  color: var(--Light-red);
+}
+
+form div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+form div:last-child hr {
+  width: 100%;
+}
+
+.btn {
+  background-color: var(--Purple);
+  padding: 1.6rem;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--Off-black);
+}
+
+.output-container h1 {
+  font-size: 8rem;
+  font-weight: 800;
+  font-style: italic;
+  height: fit-content;
+}
+
+.output-container span {
+  color: var(--Purple);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 360px;
+    padding: 1.6rem;
+  }
+
+  form {
+    gap: 0rem;
+  }
+
+  .form-wrapper {
+    margin-bottom: 5rem;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  input {
+    width: 10rem;
+    padding: 0.4rem;
+  }
+
+  input::placeholder {
+    font-size: 2rem;
+  }
+
+  form div:last-child {
+    position: relative;
+  }
+
+  .btn {
+    position: absolute;
+    padding: .8rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .output-container {
+    margin-top: 4rem;
+  }
+
+  .output-container h1 {
+    font-size: 4rem;
+  }
+}

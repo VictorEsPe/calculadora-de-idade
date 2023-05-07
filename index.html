@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Age calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <form id="date-form">
+          <div class="form-wrapper">
+            <div>
+              <label for="day">Dia</label>
+              <input type="number" id="day" placeholder="DD" />
+              <small class="day-error-message error-message"></small>
+            </div>
+
+            <div>
+              <label for="month">Mês</label>
+              <input type="number" id="month" placeholder="MM" />
+              <small class="month-error-message error-message"></small>
+            </div>
+
+            <div>
+              <label for="year">Ano</label>
+              <input type="number" id="year" placeholder="AAAA" />
+              <small class="year-error-message error-message"></small>
+            </div>
+          </div>
+
+          <div>
+            <hr />
+            <button type="submit" class="btn">
+              <img src="./assets/images/icon-arrow.svg" alt="" />
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="output-container">
+        <h1><span id="year-output">--</span> anos</h1>
+        <h1><span id="month-output">--</span> meses</h1>
+        <h1><span id="day-output">--</span> dias</h1>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
